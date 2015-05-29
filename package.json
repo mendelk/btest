@@ -1,0 +1,36 @@
+{
+  "name": "btest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browser": {
+    "local-jquery": "./scripts/jquery.js",
+    "local-magnific-popup": "./scripts/jquery.magnific-popup.js"
+  },
+  "browserify-shim": {
+    "local-jquery": "jQuery",
+    "local-magnific-popup": {
+      "depends": [
+        "local-jquery:jQuery"
+      ]
+    }
+  },
+  "devDependencies": {
+    "jquery": "<2",
+    "magnific-popup": "^1.0.0"
+  },
+  "dependencies": {
+    "browserify": "^10.2.3",
+    "browserify-shim": "^3.8.7"
+  }
+}
